@@ -1,16 +1,3 @@
-<!-- <!DOCTYPE html>
-<html>
-<body>
-
-<h2>What Can JavaScript Do?</h2>
-
-<p id="demo">JavaScript can change HTML content.</p>
-
-<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
-
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html>
     <body>
@@ -19,5 +6,19 @@
         <p id = "demo">JavaScript can change the html content</p>
 
         <button type = "button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript"'>click me</button>
+
+        <br><br><br>
+
+        <h2>What cna JavaScript do?</h2>
+        <p>JavaScript can change HTML attribute values</p>
+        <p>In This case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+        <button onclick="document.getElementById('myimage').src='ONbulb.jpg'">Turn on the light</button>
+
+        <img src="pic_bulboff.gif" id="myimage">
+
+        <button type="button" onclick="document.getElementById('myimage').src='pic_bulboff.gif'">Turn off the light</button>
+
+
     </body>
 </html>
