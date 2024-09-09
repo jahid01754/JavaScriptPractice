@@ -11,17 +11,85 @@
         </script> -->
     </head>
     <body>
-        <h2>Demo JavaScript in Head</h2>
+        <!-- <h2>Demo JavaScript in Head</h2>
         <p id="demo">A Paragraph</p>
-        <button type="button" onclick="myFunction()">Click it</button>
+        <button type="button" onclick="myFunction()">Click it</button> -->
 
         <!-- function in the body -->
-        <script>
+        <!-- <script>
             function myFunction()
             {
                 document.getElementById("demo").innerHTML = "Paragraph Changed";
             }
-        </script>
+        </script> -->
 
+        <!-- External JavaScript -->
+        <h2>Demo External JavaScript</h2>
+        <p id="demo">A Paragraph</p>
+        <button type="button" onclick="myfunction()">Click It!</button>
+
+        <script src="JavaScript file/practise.js"></script>
+
+        <br><br><br>
+
+        <!-- External JavaScript using web address -->
+        <h2>Demo External JavaScript</h2>
+        <p id="demo">A Paragraph</p>
+        <button type="button" onclick="myFunction()">Click It!</button>
+
+        <script src="https://www.w3schools.com/js/myScript.js"></script>
+
+        <br><br><br>
+        <!-- various kinds of output -->
+
+        <!-- innerHTML output -->
+         <h2>My First Web page</h2>
+         <p>My First Paragraph</p>
+         <p id="innerhtml"></p>
+
+         <script>
+            document.getElementById("innerhtml").innerHTML = 5+6;
+         </script>
+
+        <br><br>
+         <!-- document.write() output -->
+         <!-- <h2>My First Web Page</h2>
+         <p>My First Paragraph</p>
+
+         <script>
+            document.write(5+6);
+         </script>
+
+            <br>
+         <h2>My First Web Page</h2>
+         <p>My First Paragraph</p>
+
+         <button type="button" onclick="document.write(5+6)">Try it</button> -->
+
+        <br><br>
+         <!-- window.alert() output -->
+          <!-- <h1>My First Web Page</h1>
+          <p>My first Paragraph</p>
+          <script>
+            window.alert(5+6);
+          </script> -->
+
+          <br><br>
+          <!-- console.log() output -->
+           <h2>Activate debugging</h2>
+           <p>F12 on your keyboard will activate debugging.</p>
+           <p>Then select "Console" in the debugger menu.</p>
+           <p>Then click Run Again.</p>
+
+           <script>
+            console.log(5+6);
+           </script>
+
+           <br><br>
+           <!-- window.print() output method -->
+
+           <h2>window.print() method</h2>
+           <button onclick="window.print()">Print this page</button>
+           
     </body>
 </html>
