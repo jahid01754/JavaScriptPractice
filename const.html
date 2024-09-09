@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <!-- <h2>JavaScript const</h2>
+        <p id="demo"></p>
+
+        <script>
+            try {
+                const PI = 3.14159;
+                //PI = 3.14;
+                document.getElementById("demo").innerHTML = PI;
+            } catch (err) {
+                document.getElementById("demo").innerHTML = err;
+            }
+        </script> -->
+
+        <!-- <h2>JavaScript const</h2>
+
+        <p>Declaring a constant array does NOT make the elements unchangeable.</p>
+        <p id="demo"></p>
+
+        <script>
+            const cars = ["Saab","Volvo","BMW"];
+            cars[0] = "Toyota"; //to change an element
+            cars.push("Audi");  //to add an element
+
+            document.getElementById("demo").innerHTML = cars;
+        </script> -->
+
+
+        <!-- <h2>JavaScript const</h2>
+        <p>You can NOT reassign a constant array</p>
+        <p id="demo"></p>
+
+        <script>
+            try {
+                const cars = ["Saab","Volvo","BMW"];
+                //const cars = ["Toyota","Volvo","BMW"]; //can not reassign array
+                document.getElementById("demo").innerHTML = cars;
+            } catch (err) {
+                document.getElementById("demo").innerHTML = err;
+            }
+        </script> -->
+
+        <!-- <h2>JavaScript const</h2>
+        <p>Declaring a constant object does NOT make the objects properties unchangeable</p>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+        <p id="demo4"></p>
+
+        <script>
+            const car =
+            {
+                type: "Fiat",
+                model: "500",
+                color: "White"
+            };
+
+            //car.color = "red";
+            car.owner = "Johnson";
+
+            document.getElementById("demo1").innerHTML = "Car owner is " + car.owner;
+            document.getElementById("demo2").innerHTML = "Car color is " + car.color;
+            document.getElementById("demo3").innerHTML = "Car type is " + car.type;
+            document.getElementById("demo4").innerHTML = "Car model is " + car.model;
+        </script> -->
+
+
+        <h2>JavaScript Hoisting</h2>
+        <p>With <b>const</b>, you cannot use a variable before it is declared: </p>
+        <p id="demo"></p>
+
+        <script>
+            try {
+                //const carName = "Volvo";
+                alert(carName);
+                const carName = "Volvo";
+            } catch (err) {
+                document.getElementById("demo").innerHTML = err;
+            }
+        </script>
+
+    </body>
+</html>
