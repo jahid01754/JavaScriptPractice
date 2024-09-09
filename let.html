@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <!-- <h2>Redeclaring a Variable Using var</h2>
+
+        <p id="demo"></p>
+
+        <script>
+            var x = 10;
+            {
+                var x =10;
+            }
+            document.getElementById("demo").innerHTML = x;
+
+        </script> -->
+
+        <!-- <h2>Redeclaring a Variable Using let</h2>
+        <p id="demo"></p>
+        <script>
+            let x = 10;
+            {
+                let x = 2;
+                document.getElementById("demo").innerHTML = x;
+            }
+            //document.getElementById("demo").innerHTML = x;
+        </script> -->
+
+        <!-- <h2>JavaScript let</h2>
+        <p>Redeclaring a variable with <b>let</b>, in another scope, or in another block, is allowed: </p>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+
+        <script>
+            let x = 2;
+            {
+                let x = 3;
+                document.getElementById("demo2").innerHTML = x;
+            }
+            {
+                let x = 4;
+                document.getElementById("demo3").innerHTML = x;
+            }
+            document.getElementById("demo1").innerHTML = x;
+        </script> -->
+
+        <!-- <h2>JavaScript Hoisting</h2>
+
+        <p>With <b>var</b>, you can use a variable before it is declared: </p>
+        <p id="demo"></p>
+
+        <script>
+            carName = "Volvo";
+            document.getElementById("demo").innerHTML = carName;
+            var carName;
+        </script> -->
+
+        <!-- <h2>JavaScript Hoisting example 1</h2>
+
+        <p id="demo"></p>
+
+        <script>
+            x = 5;
+            elem = document.getElementById("demo")
+            elem.innerHTML = x;
+            var x;
+        </script> -->
+
+
+        <!-- <h2>JavaScript Hoisting example 2</h2>
+
+        <p>With <b>let</b>, you can not use a variable befor it is declared.</p>
+        <p id="demo"></p>
+
+        <script>
+            try{
+                carName = "Saab";
+                let carName = "Volvo";
+                document.getElementById("demo").innerHTML = carName;
+            }
+            catch(err)
+            {
+                document.getElementById("demo").innerHTML = err;
+            }
+        </script> -->
+
+        
+        <!-- <h2>JavaScript Hoisting example 3</h2>
+
+        <p>With <b>const</b>, you cannot use a variable before it is declared.</p>
+        <p>Try to remove the //</p>
+
+        <p id="demo"></p>
+
+        <script>
+            carName ="Volvo";
+            //const carName;
+
+            document.getElementById("demo").innerHTML = carName;
+        </script> -->
+
+        <h2>JavaScript Hoisting example 4</h2>
+        <p id="demo"></p>
+
+        <script>
+            var x = 5;
+            //var y= 7;
+            document.getElementById("demo").innerHTML = "x is " + x + " and y is " + y;
+            var y = 7;
+        </script>
+
+    </body>
+</html>
