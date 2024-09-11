@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <!-- <h1>JavaScript Functions</h1>
+
+        <p>Call a function which performs a calculation and returns the result: </p>
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <script>
+            function myFunction(p1,p2)
+            {
+                return p1 * p2;
+            }
+
+            let result = myFunction(3,4);
+            document.getElementById("demo").innerHTML = result;
+            document.getElementById("demo1").innerHTML = myFunction(5,6);
+        </script> -->
+
+        <!-- <h1>JavaScript Functions</h1>
+
+        <p>Call a function which performs a calculation and returns the result: </p>
+        <p id="demo"></p>
+        <P id="demo1"></P>
+        <script>
+            let x = myFunction(4,3);
+
+            document.getElementById("demo").innerHTML = x;
+            document.getElementById("demo1").innerHTML = myFunction(5,6);
+
+            function myFunction(a,b)
+            {
+                return a*b;
+            }
+        </script> -->
+
+        <!-- <h1>JavaScript Functions</h1>
+        <p>Invoke (call) a function that converts from Fahrenheit to celcius: </p>
+
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <script>
+            function toCelcius(f)
+            {
+                let a = (5/9) * (f-32);
+                return a;
+            }
+
+            let value = toCelcius(77);
+            document.getElementById("demo").innerHTML = value;
+            document.getElementById("demo1").innerHTML = toCelcius(85);
+        </script> -->
+
+        <!-- <h1>JavaScript Functions</h1>
+        <p>Invoke (call) a function to convert from Fahrenheit to Celcius: </p>
+        <p id="demo"></p>
+        <script>
+            function toCelcius(f)
+            {
+                let a = (5/9) * (f-32);
+                return a;
+            }
+            let value = toCelcius();
+            document .getElementById("demo").innerHTML= value;
+
+        </script> -->
+
+        <!-- <h1>JavaScript Functions</h1>
+        <p>Invoke (call) a function to convert from Fahrenheit to Celcius: </p>
+        <p id="demo"></p>
+        <script>
+            function toCelcius(f)
+            {
+                let a = (5/9) * (f-32);
+                return a;
+            }
+            let value = toCelcius;
+            document .getElementById("demo").innerHTML= value;
+        </script> -->
+
+
+        <!-- <h1>JavaScript Functions</h1>
+        <p>Using a function as a variable: </p>
+
+        <p id="demo"></p>
+        <script>
+            function toCelcius(f)
+            {
+                let a = (5/9) * (f-32);
+                return a;
+            }
+
+            let text = "The temperature is " + toCelcius(77) + " Celcius";
+            document.getElementById("demo").innerHTML= text;
+        </script> -->
+
+        <h1>JavaScript Functions</h1>
+        <p>Outside myFunction() carName is undefined.</p>
+
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <script>
+            let text = "Outside: " + typeof carName;
+            document.getElementById("demo").innerHTML = text;
+            function myFunction()
+            {
+                let carName = "Volvo";
+                let text = "Inside: " + typeof carName;
+                document.getElementById("demo1").innerHTML = text + " " + carName;
+            }
+            myFunction();
+        </script>
+
+
+    </body>
+</html>
