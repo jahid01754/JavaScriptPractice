@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <!-- <p id="demo"></p>
+        <script>
+            let car = "Fiat";
+            document.getElementById("demo").innerHTML = car;
+        </script> -->
+
+        <!-- <h1>JavaScripts Objects</h1>
+        <h2>Creating an Object</h2>
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <script>
+            const car = {
+                type: "Fiat",
+                model: "500",
+                color: "White"
+            }
+            document.getElementById("demo").innerHTML = car.type;
+            document.getElementById("demo1").innerHTML = car.model;
+            document.getElementById("demo2").innerHTML = car.color;
+        </script> -->
+
+        <!-- <h1>Creating JavaScript Objects</h1>
+        <h2>Using an Object Literal</h2>
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+        <script>
+            const person = {};
+            person.firstName = "John";
+            person.lastName = "Doe";
+            person.age = 50;
+            person.eyeColor = "Blue";
+            document.getElementById("demo").innerHTML = person.firstName;
+            document.getElementById("demo1").innerHTML = person.lastName;
+            document.getElementById("demo2").innerHTML = person.age;
+            document.getElementById("demo3").innerHTML = person.eyeColor;
+        </script> -->
+
+        <!-- <h1>Creating JavaScript Objects</h1>
+        <h2>Using the new keyword</h2>
+        <p id="demo"></p>
+        <script>
+            const person = new Object();
+            person.firstName = "John";
+            person.lastName = "Doe";
+            person.age = 50;
+            person.eyeColor = "Blue";
+
+            document.getElementById("demo").innerHTML = person.firstName + " is " + person.age + " years old."
+        </script> -->
+
+        <!-- <p id="demo"></p>
+        <script>
+            const person = {
+                firstName: "John",
+                lastName: "Doe",
+                id: 1234
+            };
+            document.getElementById("demo").innerHTML = "The last Name is " + person["lastName"] + " and first name is " + person.firstName;
+        </script>         -->
+
+        <!-- <h1>JavaScript Objects</h1>
+        <h2>Object Methods</h2>
+        <p>A method is a function definition stored as a property value.</p>
+        <p id="demo"></p>
+        <script>
+            const person = {
+                firstName: "John",
+                lastName: "Doe",
+                id: 1234,
+                fullName: function(){
+                    return this.firstName + " " + this. lastName;
+                }
+            };
+
+            document.getElementById("demo").innerHTML = person.fullName();
+        </script> -->
+
+        <!-- <p id="demo"></p>
+        <script>
+            const a = { name: 'jahidul'}
+            a.name = 'zim'
+            (
+            // console.log(a);
+            function test(){
+                var c = 1;
+                console.log(c);
+                return c
+                
+            }
+            test(};
+            console.log(c); -->
+
+            <!-- <h1>JavaScript Objects</h1>
+            <p>There are two ways to access a property: object.property or object["property"]</p>
+            <p id="demo"></p>
+            <p id="demo1"></p>
+            <script>
+                const person ={
+                    firstName: "John",
+                    lastName: "Doe",
+                    id: 1234
+                };
+                document.getElementById("demo").innerHTML = "The last name is " + person.lastName;
+                document.getElementById("demo1").innerHTML = "The first name is " + person["firstName"];
+            </script> -->
+
+            <h1>JavaScript Objects</h1>
+            <h2>Object Methods</h2>
+            <p>A method is a function definition stored as a property value. </p>
+            <p id="demo"></p>
+            <script>
+                const person ={
+                    firstName: "John",
+                    lastName: "Doe",
+                    id: 1234,
+                    // fullname: function(){
+                    //     let a = this.firstName + " " + this.lastName;
+                    //     return a;
+                    // }
+                    function: fullname (a,b){
+                        return  a + " " + b;
+                    }
+
+                };
+                // document.getElementById("demo").innerHTML = person.fullname();
+                document.getElementById("demo").innerHTML = person.fullname(firstName,lastName);
+
+            </script>
+            
+        </script>
+    </body>
+</html>
