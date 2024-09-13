@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Object Properties</title>
+    </head>
+    <body>
+        <!-- <p id="demo"></p>
+        <script>
+            const person = {
+                firstName: "John",
+                lastName: "Doe",
+                age: 50,
+                eyecolor: "Blue"
+            };
+            document.getElementById("demo").innerHTML = person.firstName + " is " + person.age + " years old."
+        </script> -->
+
+        <!-- <p id="id"></p>
+        <script>
+            const person ={
+                firstName: "John",
+                lastName: "Doe",
+                age: 50,
+            };
+            let x = "firstName";
+            let y = "lastName";
+            let z = "age";
+            document.getElementById("id").innerHTML = person[x] + " is " + person[z] + " years old."
+        </script> -->
+
+        <!-- <p id="demo"></p>
+        <script>
+            const person = {
+                firstName: "John",
+                lastName: "Doe",
+                age: 50,
+                eyeColor: "Blue"
+            };
+            person.nationality = "English";
+            document.getElementById("demo").innerHTML = person.firstName + " is " + person.nationality;
+        </script> -->
+
+        <!-- <p id="demo"></p>
+        <script>
+            const person = {
+                firstName: "John",
+                lastName: "Doe",
+                age: 50,
+                eyeColor: "Blue"
+            };
+            delete person.age;
+            document.getElementById("demo").innerHTML = person.firstName + " is " + person.age + " years old."
+        </script> -->
+
+        <h2>Accessing Nested Objects</h2>
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <script>
+            const person ={
+                firstName: "John",
+                lastName: "Doe",
+                age: 30,
+                myCars: {
+                    car1: "Ford",
+                    car2: "BMW",
+                    car3: "Fiat"
+                }
+            };
+            let p1 = "myCars";
+            let p2 = "car2";
+            document.getElementById("demo").innerHTML = person.firstName + " loves to drive " + person.myCars.car3;
+            document.getElementById("demo1").innerHTML = person.firstName + " loves to drive " + person[p1][p2];
+        </script>
+    </body>
+</html>
