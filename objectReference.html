@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Reference</title>
+</head>
+<body>
+    <!-- <p id="demo"></p>
+    <script>
+        
+        const person1 ={
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor:"Blue"
+        };
+       
+        const person2 = {
+            firstName: "Anne",
+            lastName: "Smith",
+            age: 20,
+            eyeColor: "Brown"
+        };
+        //Assign Source to Target
+        Object.assign(person1,person2);
+
+        let text = Object.entries(person2);
+        document.getElementById("demo").innerHTML = text;
+    </script> -->
+
+    <!-- <p id="demo1"></p>
+    <script>
+        const profile1 ={
+            firstName1: "Jahidul",
+            lastName1: "Hasan",
+            age1: 29,
+            eyeColor1: "Black"
+        };
+        const profile2 ={
+            firstName1: "Mushfique",
+            lastName1: "Rahman",
+            age1: 35,
+            eyeColor1: "Navy Blue"
+        };
+        Object.assign(profile1,profile2);
+        let show = Object.entries(profile2);
+        document.getElementById("demo1").innerHTML = show;
+    </script> -->
+
+    <h2>The Object.create() Method</h2>
+    <p>Create a new object form the prototype of another object</p>
+
+    <p id="demo2"></p>
+    <script>
+        const person ={
+            firstName: "John",
+            lastName: "Doe",
+            language: "English"
+        };
+        const man = Object.create(person);
+        man.firstName = "Peter";
+        document.getElementById("demo2").innerHTML = person.firstName + " and " + man.firstName;
+    </script>
+</body>
+</html>
