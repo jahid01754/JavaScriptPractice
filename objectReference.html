@@ -307,7 +307,7 @@
         document.getElementById("demo").innerHTML = text;
     </script> -->
 
-    <p id="demo"></p>
+    <!-- <p id="demo"></p>
     <script>
         "use strict"
         const person = {
@@ -325,6 +325,32 @@
         }
 
         document.getElementById("demo").innerHTML = text;
-    </script>
+    </script> -->
+
+    <!-- <p id="demo"></p>
+    <script>
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "Blue"
+        };
+        let descriptor = Object.getOwnPropertyDescriptors(person);
+        document.getElementById("demo").innerHTML = descriptor.eyeColor.value;
+    </script> -->
+
+    <!-- <p id="demo"></p>
+    <script>
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "Blue"
+        };
+        let props = Object.getOwnPropertyNames(person);
+        document.getElementById("demo").innerHTML = props[1];
+    </script> -->
+
+    
 </body> 
 </html>
