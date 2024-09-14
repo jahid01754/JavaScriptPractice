@@ -13,14 +13,16 @@
             firstName: "John",
             lastName: "Doe",
             age: 50,
-            eyeColor:"Blue"
+            eyeColor:"Blue",
+            
         };
        
         const person2 = {
             firstName: "Anne",
             lastName: "Smith",
             age: 20,
-            eyeColor: "Brown"
+            eyeColor: "Brown",
+            // skinColor: "Black"
         };
         //Assign Source to Target
         Object.assign(person1,person2);
@@ -48,7 +50,7 @@
         document.getElementById("demo1").innerHTML = show;
     </script> -->
 
-    <h2>The Object.create() Method</h2>
+    <!-- <h2>The Object.create() Method</h2>
     <p>Create a new object form the prototype of another object</p>
 
     <p id="demo2"></p>
@@ -61,6 +63,268 @@
         const man = Object.create(person);
         man.firstName = "Peter";
         document.getElementById("demo2").innerHTML = person.firstName + " and " + man.firstName;
+    </script> -->
+
+    <!-- <h2>Object Methods</h2>
+    <p id="demo"></p>
+    <script>
+        const person1 = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "Blue"
+        };
+        const person2 = {
+            firstName: "Anne",
+            lastName: "Smith",
+            //age: 50,
+            //eyeColor: "Blue"
+        };
+        Object.assign(person1,person2);
+        let text = Object.entries(person1);
+        document.getElementById("demo").innerHTML = text ;
+        //document.getElementById("demo").innerHTML = x; 
+    </script> -->
+
+    <!-- <p id="demo"></p>
+
+    <script>
+    // Create Target Object
+        const person1 = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "blue"
+    };
+
+    // Create Source Object
+        const person2 = {firstName: "Anne",lastName: "Smith"};
+
+    // Assign Source to Target
+        Object.assign(person1, person2);
+
+    // Display Target
+        let text = Object.entries(person1);
+        document.getElementById("demo").innerHTML = text;
+    </script> -->
+
+    <!-- <h1>JavaScript Objects</h1>
+    <h2>The Object.create() Method</h2>
+    <p>Create a new object from the prototype of another object</p>
+    <p id="demo"></p>
+    <script>
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            language: "EN"
+        };
+        const man = Object.create(person);
+        man.firstName = "Peter";
+
+        document.getElementById("demo").innerHTML = person.firstName + " and " + man.firstName;
+    </script> -->
+
+    <!-- <p>The number of pears are: </p>
+    <p id="demo"></p>
+    <script>
+        const fruits = [["apples",300],["pears",900],["bananas",500]];
+        const myObj = Object.fromEntries(fruits);
+        document.getElementById("demo").innerHTML = myObj.pears;
+    </script> -->
+
+    <!-- <h2>The constructor Property</h2>
+    <p id="demo"></p>
+    <script>
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "Blue"
+        };
+        let text = person.constructor;
+        document.getElementById("demo").innerHTML = text;
+    </script> -->
+
+    <!-- <p>This example adds a new property to an object.</p>
+    <p id="demo"></p>
+    <script>
+        const person = {
+            firstName: "John",
+            lastName: "Doe"
+        };
+        Object.defineProperties(
+            person,{
+                language: {value: "En"},
+                year: {value: "Hello"}
+            }
+        );
+        document.getElementById("demo").innerHTML = person.language + " " + person.year;
+    </script> -->
+
+    <!-- <p id="demo"></p>
+    <script>
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            language: "En"
+        };
+        Object.defineProperty(
+            person, "year", {value: "2008"}
+        )
+        Object.defineProperty(
+            person,"language",{value: "NO"}
+        )
+        document.getElementById("demo").innerHTML = person.year + " " + person.language;
+    </script> -->
+
+    <!-- <p>The Object.getOwnPropertyNames() returns an array with the properties of an object.</p>
+    <p id="demo"></p>
+    <script>
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "blue"
+        };
+        let props = Object.getOwnPropertyNames(person);
+        document.getElementById("demo").innerHTML = props[0];
+    </script> -->
+
+    <!-- <p>Object.getOwnPropertyDescriptor() returns the descriptor of a property.</p>
+    <p id="demo"></p>
+    <script>
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "Blue"
+        };
+        let descriptor = Object.getOwnPropertyDescriptor(person, "lastName");
+        document.getElementById("demo").innerHTML = descriptor.value + " " + descriptor.writable;
+    </script> -->
+
+    <!-- <p>Object.getOwnPropertyDescriptors() returns the property descriptors of an object.</p>
+    <p id="demo"></p>
+    <script>
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "Blue"
+        };
+        let descriptors = Object.getOwnPropertyDescriptors(person);
+        document.getElementById("demo").innerHTML = descriptors.age.value;
+    </script> -->
+
+    <!-- <p id="id"></p>
+    <script>
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "Blue"
+        };
+        // const person1 = {
+        //     firstName: "John",
+        //     lastName: "Doe"
+        // };
+        //Object.assign(person,person1)
+        let text =  Object.entries(person);
+        document.getElementById("id").innerHTML = text;
+
+    </script> -->
+
+    <!-- <p>Object.entries() returns an array of the key/value pairs of an object.</p>
+    <p>Object.entries() makes it simple to use objects in loops: </p>
+    <p id="demo"></p>
+    <script>
+        const fruits = {
+            Bananas: 300,
+            Oranges: 200,
+            Apples: 500
+        };
+        let text = "";
+        for (let [fruit,amount] of Object.entries(fruits)){
+            text += fruit + ": " + amount + "<br>";
+        }
+        document.getElementById("demo").innerHTML = text;
+    </script> -->
+
+    <!-- <p id="demo"></p>
+    <script>
+        "Use strict"
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "Blue"
+        };
+        Object.freeze(person)
+        let text;
+        try {
+            person.age = 51;
+            text = Object.values(person);
+        } catch (err) {
+            text = err;
+        }
+
+        document.getElementById("demo").innerHTML = text;
+    </script> -->
+
+    <!-- <p id="demo1"></p>
+    <p id="demo"></p>
+    
+    <script>
+        "use strict"
+        const person = {
+            firstName: "John",
+            lastName: "Doe"
+        };
+        document.getElementById("demo1").innerHTML = person.lastName;
+        Object.preventExtensions(person);
+        //let text = "";
+        try {
+            let text = person.lastName = "English";
+            document.getElementById("demo").innerHTML = text;
+            
+        } catch (error) {
+            text = "error";
+            document.getElementById("demo").innerHTML = text;
+        }
+        
+    </script> -->
+
+    <!-- <p id="demo"></p>
+    <script>
+        const fruit = [ "Banana","Orange","Apple","Mango"];
+        Object.preventExtensions(fruit);
+        let text = "";
+        try {
+            fruit.push("Kiwi");
+        } catch (error) {
+            text = error;
+        }
+        document.getElementById("demo").innerHTML = text;
+    </script> -->
+
+    <p id="demo"></p>
+    <script>
+        "use strict"
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "Blue"
+        };
+        Object.seal(person);
+        let text = "";
+        try {
+            delete person.age;
+        } catch (err) {
+            text = err;
+        }
+
+        document.getElementById("demo").innerHTML = text;
     </script>
-</body>
+</body> 
 </html>
