@@ -6,7 +6,7 @@
     <title>Object Methods</title>
 </head>
 <body>
-    <p id="demo"></p>
+    <!-- <p id="demo"></p>
     <script>
         const person = {
             firstName: "John",
@@ -17,6 +17,53 @@
             }
         };
         document.getElementById("demo").innerHTML = person.fullname();
+    </script> -->
+
+
+    <!-- <p id="demo"></p>
+    <script>
+        const person = {
+            firstName: "John",
+            lastName:  "Doe",
+            id: 1234,
+            fullname: function() {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+        document.getElementById("demo").innerHTML = person.fullname();
+    </script> -->
+
+    <!-- <h1>Adding a Method</h1>
+    <p id="demo"></p>
+    <script>
+        const person = {
+            firstName: "Lilly",
+            lastName: "Doe",
+            id: 1234
+        };
+        //Adding a method
+        person.name = function(){
+            return this.firstName + " " + this.lastName;
+        };
+        document.getElementById("demo").innerHTML = person.name();
+    </script> -->
+
+    <h2>toUpperCase()</h2>
+    <p id="demo"></p>
+    <script>
+        const person = {
+            firstName: "Lilly",
+            lastName: "Doe",
+            id: 1234
+        };
+        //Adding a method
+        person.name = function(){
+            return (this.firstName + " " + this.lastName).toUpperCase();
+        };
+        document.getElementById("demo").innerHTML = person.name();
     </script>
+
+
+
 </body>
 </html>
