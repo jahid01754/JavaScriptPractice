@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Objects</title>
+</head>
+<body>
+    <!-- <p>Displaying a JavaScript object will output [object Object]:</p>
+    <p id="demo"></p>
+    <script>
+        const person = {
+            name: "John",
+            age: 20,
+            city: "New York"
+        };
+        document.getElementById("demo").innerHTML = person.name + " " + person.age + " " + person.city;
+    </script> -->
+
+    <!-- <p>Displaying a JavaScript object will output [object Object]:</p>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+        // const person = {
+        //     name: "John",
+        //     age: 20,
+        //     city: "New York"
+        // };
+        // let text = "";
+        // for (let x in person){
+        //     text += person[x] + " ";
+        // }
+        // document.getElementById("demo").innerHTML = text;
+
+        const profile = {
+            firstName: "Harry",
+            year : 20,
+            area: "Brisbane"
+        };
+        let text1 = "";
+        for(let y in profile){
+            text1 += profile[y] + ", ";
+        }
+        document.getElementById("demo1").innerHTML = text1;
+    </script> -->
+
+    <!-- <p>Object.entries() makes it simple to use objects in loops</p>
+    <p id="demo"></p>
+    <script>
+        const fruits = {
+            Bananas: 300,
+            Oranges: 200,
+            Apples: 500
+        };
+        let text = "";
+        for(let [fruit,amount] of Object.entries(fruits)){
+            text += fruit + ": " + amount + "<br>";
+        }
+        document.getElementById("demo").innerHTML = text;
+    </script> -->
+
+    <h2>Display Properties with JSON</h2>
+    <p id="demo"></p>
+    <script>
+        const person = {
+            name: "John",
+            age: 30,
+            city: "New York"
+        };
+        document.getElementById("demo").innerHTML = JSON.stringify(person);
+    </script>
+
+
+</body>
+</html>
