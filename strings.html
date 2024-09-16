@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Strings</title>
+</head>
+<body>
+    <h1>JavaScript Strings</h1>
+    
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+
+    <script>
+        let text = "John Doe";
+
+        let ans1 = "It's alright";
+        let ans2 = "He is called 'Johnny'";
+        let ans3 = 'He is called "Johnny"';
+
+        let text1 = "We are the so-called \"Vikings\" from the north.";
+        let text2 = 'It\'s alright.';
+        let text3 = `the quick
+                    brown fox
+                    jumps over
+                    the lazy dog`;
+        let x = "John";
+        let y = new String("John");
+        
+        document.getElementById("demo").innerHTML = text;
+        document.getElementById("demo1").innerHTML = ans1 + " <br>" + ans2 + "<br>" + ans3;
+        document.getElementById("demo2").innerHTML = ans1.length;
+        document.getElementById("demo3").innerHTML = text1;
+        document.getElementById("demo4").innerHTML = text2;
+        document.getElementById("demo5").innerHTML = text3;
+        document.getElementById("demo6").innerHTML = typeof x + "<br>" + typeof y;
+        
+
+    </script>
+</body>
+</html>
