@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Constructor</title>
+</head>
+<body>
+    <h1>JavaScript Object Constructor</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <script>
+        //constructor function for person object
+        function Person (first,last,age,eye){
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = eye;
+            //this.nationality = "English";
+            // method
+            this.fullName = function(){
+                return this.firstName + " " + this.lastName;
+            }
+        }
+        //create a person object
+        const myFather = new Person("John","Doe",50,"Brown");
+        const myMother = new Person("Lilly", "Potter", 35, "Blue");
+
+        //Add nationality to first object
+        // myFather.nationality = "English";
+        // myMother.nationality = "Canadian";
+
+        //will not work
+        //Person.nationality = "English";
+
+        //Add new property to constructor
+        Person.prototype.nationality = "English";
+
+        //Add a name Method for object
+        myMother.changeName = function(name){
+            return this.lastName = name;
+        }
+        //change Name
+        //myMother.changeName("Sydney");
+
+        //add a method for constructor Object
+        Person.prototype.changeName = function(name){
+            return this.lastName = name
+        }
+        //change Name
+        myFather.changeName(" Denver");
+
+        //display
+        document.getElementById("demo").innerHTML = "My father is " + myFather.age + " years old.";
+
+        document.getElementById("demo1").innerHTML = "My Fathers's name is " + myFather.firstName + " " + myFather.lastName + ".<br>" + " She is " + myFather.age + " years old. <br> And the color of her eyes is " + myFather.eyeColor;
+
+        document.getElementById("demo2").innerHTML = "My Mother's name is " + myMother.firstName + " " + myMother.lastName + ".<br>" + " She is " + myMother.age + " years old. <br> And the color of her eyes is " + myMother.eyeColor;
+
+        document.getElementById("demo3").innerHTML = "My father is " + myFather.nationality + ". And my mother is " + myMother.nationality;
+
+        document.getElementById("demo4").innerHTML = "My Father is " + myFather.fullName();
+
+        document.getElementById("demo5").innerHTML = "<p>The typeof new Object() is " + typeof new Object() + "</p>" +
+        "<p>The typeof new Array() is " + typeof new Array() + "</p>" +
+        "<p>The typeof new Map() is " + typeof new Map() + "</p>" +
+        "<p>The typeof new Set() is " + typeof new Set() + "</p>" +
+        "<p>The typeof new Date() is " + typeof new Date() + "</p>" +
+        "<p>The typeof new RegExp() is " + typeof new RegExp() + "</p>" +
+        "<p>The typeof new Function() is " + typeof new Function() + "</p>" ;
+    </script>
+
+
+
+</body>
+</html>
