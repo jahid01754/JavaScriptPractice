@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Numbers</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    
+    <script>
+        let x1 = 123e5;
+        let y1 = 123e-5;
+
+        let x2 = 0.2 + 0.1;
+        let y2 = (0.2*10 + 0.1*10)/10;
+
+        let x3 = 10;
+        let y3 = "20";
+        let z3 = x3 + y3;
+        
+        var x4 = 10;
+        var y4 = 20;
+
+        let x5 = "100";
+        let y5 = "20";
+        let z5 = x5/y5;
+
+        let x6 = 100/"Apple";
+
+        let x7 = NaN;
+        let y7 = 5;
+
+        let myNumber = 2;
+        let txt = "";
+
+        while(myNumber != Infinity){
+            myNumber = myNumber * myNumber;
+            txt = txt + myNumber + "<br>";
+        }
+
+        let x8 = 0xFF;
+        
+        let x9 = 123;
+        let y9 = new Number(123);
+
+        document.getElementById("demo1").innerHTML = x1 + "<br>" + y1;
+        document.getElementById("demo2").innerHTML = x2;
+        document.getElementById("demo3").innerHTML = y2;
+        document.getElementById("demo4").innerHTML = z3;
+        document.getElementById("demo5").innerHTML = "The result is: " + x4 + y4;
+        document.getElementById("demo6").innerHTML = z5;
+        document.getElementById("demo7").innerHTML = isNaN(x6);
+        document.getElementById("demo8").innerHTML = x7 + y7;
+        document.getElementById("demo9").innerHTML = txt;
+        document.getElementById("demo10").innerHTML = "0xFF = " + x8;
+        document.getElementById("demo11").innerHTML = typeof x9 + "<br>" + typeof y9;
+
+    </script>
+</body>
+</html>
