@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Search</title>
+</head>
+<body>
+    <h1>JavaScript Strings</h1>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <script>
+        let text1 = "Please locate where 'locate' occurs!";
+        let index1 = text1.indexOf("locate");
+
+        let text2 = "Please locate where 'locate' occurs!";
+        let index2 = text2.lastIndexOf("locate");
+
+        let text3 = "Please locate where 'locate' occurs!";
+        let index3 = text3.search("!");
+
+        let text4 = "The rain in SPAIN stays mainly in the plain";
+        const myArr = text4.match(/ain/gi);
+
+        let text5 = "I love cats. Cats are very easy to love. Cats are very popular.";
+        const iterator = text5.matchAll(/Cats/gi);
+
+        let text6 = "Hello World, welcome to the universe.";
+        let text7 = "Hello World, welcome to the universe.";
+        let text8 = "Hello World, welcome to the universe.";
+        let text9 = "Hello World, welcome to the universe.";
+
+        document.getElementById("demo1").innerHTML = index1;
+        document.getElementById("demo2").innerHTML = index2;
+        document.getElementById("demo3").innerHTML = index3;
+        document.getElementById("demo4").innerHTML = myArr.length + " " + myArr;
+        document.getElementById("demo5").innerHTML = Array.from(iterator);
+        document.getElementById("demo6").innerHTML = text6.includes("World",2);
+        document.getElementById("demo7").innerHTML = text7.startsWith("World",6);
+        document.getElementById("demo8").innerHTML = text8.endsWith("universe.");
+        document.getElementById("demo9").innerHTML = text9.endsWith("World",11);
+    </script>
+</body>
+</html>
