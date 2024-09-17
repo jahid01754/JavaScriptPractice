@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+</head>
+<body>
+    <h1>JavaScript String</h1>
+
+    <p id="demo"></p>
+    <!-- <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p> -->
+    
+    
+    <p id="demo6">uppercase!</p>
+    <button onclick="upperCaseFunction()">Try it</button> 
+    <p id="demo7">LOWERCASEE!</p>
+    <button onclick="lowerCaseFunction1()">Try it</button>
+
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+
+    <p id="demo14">Please Visit Microsoft</p>
+    <button onclick = "replaceFunction()">Replace</button>
+
+    <p id="demo15"></p>
+    <p id="demo16"></p>
+    
+    <script>
+        //var text = "HELLO WORLD";
+        const name = "W3Schools";
+        let letter = name.at(2);
+        let letter1 = name.at[2];
+        let text1 = "Apple, Banana, Kiwi";
+        //let part = text1.slice(7,13);
+        //let part = text1.slice(-4);
+        let part =  text1.slice(-12,-6);
+        let str = "Apple, Banana, Kiwi";
+        let str1 = "Apple, Banana, Kiwi";
+
+        let text4 = "Hello";
+        let text5 = "World!";
+        let text6 = text4.concat(" ",text5); 
+
+        let text7 = "     Hello World!    ";
+        let text8 = text7.trim();
+
+        let text9 = "     Hello World!    ";
+        let text10 = text7.trimStart();
+
+        let text11 = "     Hello World!    ";
+        let text12 = text7.trimEnd();
+
+        let text13 = "5";
+        text13 = text13.padStart(4,"x");
+
+        let text14 = "Hello World!";
+        let result = text14.repeat(2);
+
+        let text16 = "a,b,c,d,e,f";
+        const myArray = text16.split(",");
+
+        // let text = "Hello";
+        // const myArr = text.split("");
+        // text = "";
+        // for (let i = 0; i<myArr.length; i++){
+        //     text17 += myArr[i] + "<br>"
+        // }
+
+
+        let text = "Hello";
+        const myArr = text.split("");
+
+        text = "";
+        for (let i = 0; i < myArr.length; i++) {
+        text += myArr[i] + "<br>"
+        }
+        document.getElementById("demo16").innerHTML = text;
+
+        function upperCaseFunction(){
+            let text2 = document.getElementById("demo6").innerHTML;
+            document.getElementById("demo6").innerHTML = text2.toUpperCase();
+            
+        }
+        function lowerCaseFunction1(){
+            let text3 = document.getElementById("demo7").innerHTML;
+            document.getElementById("demo7").innerHTML = text3.toLowerCase();
+        }
+        function replaceFunction(){
+            let text15 = document.getElementById("demo14").innerHTML;
+            document.getElementById("demo14").innerHTML = text15.replace(/Microsoft/i,"W3Schools");
+        }
+
+       // document.getElementById("demo").innerHTML = text.charAt(4);
+        document.getElementById("demo1").innerHTML = letter;
+        document.getElementById("demo2").innerHTML = letter;
+        document.getElementById("demo3").innerHTML = part;
+        document.getElementById("demo4").innerHTML = str.substring(7);
+         document.getElementById("demo5").innerHTML = str.substr(-7);
+        document.getElementById("demo8").innerHTML = text6;
+        document.getElementById("demo9").innerHTML = "Length text7 = " + text7.length + "<br> Length Text8 = " + text8.length;
+        document.getElementById("demo10").innerHTML = "Length text9 = " + text9.length + "<br> Length Text10 = " + text10.length;
+        document.getElementById("demo11").innerHTML = "Length text11 = " + text11.length + "<br> Length Text12 = " + text12.length;
+        document.getElementById("demo12").innerHTML = text13;
+        document.getElementById("demo13").innerHTML = result;
+        document.getElementById("demo15").innerHTML = myArray[4];
+        //document.getElementById("demo16").innerHTML = text;
+
+    </script>
+</body>
+</html>
