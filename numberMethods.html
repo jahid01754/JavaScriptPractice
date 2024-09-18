@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Methods</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <script>
+      let x1 = 123;
+      let x2 = 9.656;
+
+      let x3 = new Date("1970-01-02");
+
+    //   const x = {
+    //     name: "choion", 
+    //     age: 28
+    //   };
+    //   //x.push(1)
+      
+    //   x.name = "zim";
+
+      document.getElementById("demo1").innerHTML =
+        x1.toString() +
+        "<br>" +
+        (123).toString() +
+        "<br>" +
+        (100 + 23).toString();
+      document.getElementById("demo2").innerHTML =
+        x2.toFixed(0) +
+        "<br>" +
+        x2.toFixed(2) +
+        "<br>" +
+        x2.toFixed(4) +
+        "<br>" +
+        x2.toFixed(6);
+      //document.getElementById("demo3").innerHTML = JSON.stringify(x);
+      document.getElementById("demo4").innerHTML = Number(x3);
+      document.getElementById("demo5").innerHTML = 
+      parseInt("-10") + "<br>" +
+      parseInt("-10.33") + "<br>" +
+      parseInt("10") + "<br>" +
+      parseInt("10.33") + "<br>" +
+      parseInt("10 6") + "<br>" +
+      parseInt("10 years") + "<br>" +
+      parseInt("years 10") + "<br>";
+      document.getElementById("demo6").innerHTML = Number.isInteger(10) + "<br>" +
+      Number.isInteger(10.5);  
+      document.getElementById("demo7").innerHTML = 
+      Number.isSafeInteger(10) + "<br>" +
+      Number.isSafeInteger(123456789012345678901234567890);
+    </script>
+  </body>
+</html>
