@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Array</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <script>
+        const cars1 = ["Saab","Volvo","BMW"];
+        document.getElementById("demo1").innerHTML = cars1;
+    </script>
+
+    <p id="demo2"></p>
+    <script>
+        const cars2 = [];
+        cars2[0] = "Saab";
+        cars2[1] = "Volvo";
+        cars2[2] = "BMW";
+        document.getElementById("demo2").innerHTML = cars2
+    </script>
+
+    <p id="demo3"></p>
+    <script>
+        const cars3 = new Array("Saab","Volvo","BMW");
+        document.getElementById("demo3").innerHTML = cars3;
+    </script>
+
+    <p id="demo4"></p>
+    <script>
+        const cars4 = ["Saab","Volvo","BMW"];
+        document.getElementById("demo4").innerHTML = cars4[1];
+    </script>
+
+    <p id="demo5"></p>
+    <script>
+        const cars5 = ["Saab","Volvo","BMW"];
+        cars5[0] = "Opel";
+        document.getElementById("demo5").innerHTML = cars5;
+    </script>
+
+    <p id="demo6"></p>
+    <script>
+        const cars6 = ["Saab","Volvo","BMW","Fiat","Mercedes"];
+        document.getElementById("demo6").innerHTML = cars6.toString();
+    </script>
+
+    <p id="demo7"></p>
+    <script>
+        const cars7 = {
+            firstCar: "Volvo",
+            secondCar: "Fiat",
+            numOfCar: 2
+        };
+        document.getElementById("demo7").innerHTML = 
+        cars7.firstCar + "<br>" +
+        cars7.secondCar + "<br>" +
+        cars7.numOfCar;
+    </script>
+
+    <p id="demo8"></p>
+    <script>
+        const cars8 = ["Saab","Volvo","BMW","Fiat","Mercedes"];
+        let size = cars8.length;
+        document.getElementById("demo8").innerHTML = size;
+    </script>
+
+    <p id="demo9"></p>
+    <script>
+        const cars9 = ["Saab","Volvo","BMW","Fiat","Mercedes"];
+        document.getElementById("demo9").innerHTML = cars9[cars9.length-1];
+    </script>
+
+    <p id="demo10"></p>
+    <script>
+        const cars10 = ["Saab","Volvo","BMW","Fiat","Mercedes"];
+        let carLen1 = cars10.length;
+
+        let text1 = "<ul>";
+        //let text;
+        for(let i=0; i<carLen1; i++){
+            text1 += "<li>" + cars10[i] + "</li>";
+            //text += cars10[i];
+        }
+        text1 += "</ul>";
+        document.getElementById("demo10").innerHTML = text1;
+    </script>
+
+    <p id="demo11"></p>
+    <script>
+        const cars11 = ["Saab","Volvo","BMW","Fiat","Mercedes"];
+        let text2 ="<ul>";
+        
+        cars11.forEach(myFunction);
+        function myFunction(value){
+            text2 += "<li>" + value + "</li>"; 
+        }
+        text2 += "</ul>";
+        document.getElementById("demo11").innerHTML = text2;
+    </script>
+
+    <p id="demo12"></p>
+    <button onclick="addFunction()">Add</button>
+    <script>
+        const cars12 = ["Saab","Volvo","BMW","Fiat","Mercedes"];
+        document.getElementById("demo12").innerHTML = cars12;
+        
+        function addFunction(){
+            cars12.push("Toyota");
+            document.getElementById("demo12").innerHTML = cars12;
+        }
+    </script>
+
+    <p id="demo13"></p>
+    <script>
+        const cars13 = ["Saab","Volvo","BMW","Fiat","Mercedes"];
+        cars13[7] = "Toyota";
+
+        let carLen2 = cars13.length;
+        let text3 = "";
+        for(i=0; i<carLen2; i++){
+            text3 += cars13[i] + "<br>";
+        }
+        //text3 += "</ul>"
+        document.getElementById("demo13").innerHTML = text3;
+    </script>
+
+    <p id="demo14"></p>
+    <script>
+        const cars14 = [];
+        cars14[0] = "Saab";
+        cars14[1] = "Volvo";
+        cars14[2] = "Fiat";
+        document.getElementById("demo14").innerHTML = cars14[2] + " " + cars14.length;
+    </script>
+    
+    <p id="demo15"></p>
+    <script>
+        const person1 = [];
+        person1["firsName"] = "John";
+        person1["lastName"] = "Doe";
+        person1["age"] = 46;
+
+        document.getElementById("demo15").innerHTML = person1["0"] + " " + person1.length;
+    </script>
+
+    <p id="demo16"></p>
+    <script>
+        //const points = new Array(10,20,30,40,50);
+        const points = [10,20,30,40,50]
+
+        document.getElementById("demo16").innerHTML = points[3];
+    </script>
+
+    <p id="demo17"></p>
+    <script>
+        var points1 = new Array(40);
+        document.getElementById("demo17").innerHTML = points1;
+    </script>
+
+    <p id="demo18"></p>
+    <script>
+        var points2 = [40]
+        document.getElementById("demo18").innerHTML = points2;
+    </script>
+
+    <p id="demo19"></p>
+    <script>
+        const cars15 = ["Saab","Volvo","BMW","Fiat","Mercedes"];
+        document.getElementById("demo19").innerHTML = Array.isArray(cars15);
+    </script>
+
+    <p id="demo20"></p>
+    <script>
+        let x = "";
+        const myobj = {
+            name: "John",
+            age: 20,
+            cars: [
+                {
+                    name: "Ford",
+                    model: ["Fiesta", "Focus", "Mustang"]
+                },
+                {
+                    name: "BMW",
+                    model: ["320","X3","X5"]
+                },
+                {
+                    name: "Fiat",
+                    model: ["500","Panda"]
+                }
+            ]
+        };
+        for(let i in myobj.cars){
+            x += "<h2>" + myobj.cars[i].name + "</h2>";
+            for(let j in myobj.cars[i].model){
+                x += "<li>" + myobj.cars[i].model[j] + "</li>";
+            }
+        }
+
+        document.getElementById("demo20").innerHTML = x;
+    </script>
+</body>
+</html>
