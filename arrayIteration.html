@@ -59,10 +59,36 @@
         document.getElementById("demo6").innerHTML = myArr;
     </script>
     
+    <button onclick="otp()">press</button>
     <p id="demo7"></p>
+    
     <script>
-        const months = ["Januar", "Februar", "Mar", "April"];
-        document.getElementById("demo7").innerHTML = months;
+        //let text2 = "";
+        function otp(){
+            let x = Math.floor(1000 + Math.random() * 9000);//.toString();
+
+            if(1000 < x  && 10000 > x){
+                document.getElementById("demo7").innerHTML = x;
+            }
+            else{
+                document.getElementById("demo7").innerHTML = "err " + x;
+            }
+        }        
     </script>
+
+    <!-- <button onclick="otp1()">press</button>
+    <p id="demo8"></p>
+    
+    <script>
+        function otp1(){
+            let x1 = 1000 + Math.random() * 9000;
+            document.getElementById("demo8").innerHTML = x1;
+        }
+        
+    </script> -->
+
+
+
+
 </body>
 </html>
