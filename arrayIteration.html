@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Iteration</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <script>
+        const numbers = [45,4,9,16,25];
+        let text = "";
+        numbers.forEach(myFunction);
+        function myFunction(value){
+            text += value + "<br>";
+        }
+        document.getElementById("demo1").innerHTML = text;
+    </script>
+
+    <p id="demo2"></p>
+    <script>
+        //const numbers1 = [45,4,9,16,25];
+        const numbers2 = numbers.map(myFunction1);
+
+        function myFunction1(value,index,array){
+            return value* 2;
+        }
+        document.getElementById("demo2").innerHTML = numbers2;
+    </script>
+
+    <p id="demo3"></p>
+    <script>
+        const numbers3 = [2,4,5,8,3,7];
+        const numbers4 = numbers3.map(num => num * 2);
+        document.getElementById("demo3").innerHTML = numbers4;
+    </script>
+
+    <p id="demo4"></p>
+    <script>
+        const numbers5 = [45,4,9,16,25];
+        const over18 = numbers5.filter(x => x>18);
+        document.getElementById("demo4").innerHTML = over18;
+    </script>
+
+    <p id="demo5"></p>    
+    <script>
+        const numbers6 =  [45, 4, 9, 16, 25];
+        let sum = numbers6.reduce(myFunction2,100);
+
+        function myFunction2(total1,value1,index1,array1){
+            return total1 + value1;
+        }
+        document.getElementById("demo5").innerHTML = sum;
+    </script>
+
+    <p id="demo6"></p>
+    <script>
+        const myArr = Array.from("ABCDEF");
+        document.getElementById("demo6").innerHTML = myArr;
+    </script>
+    
+    <p id="demo7"></p>
+    <script>
+        const months = ["Januar", "Februar", "Mar", "April"];
+        document.getElementById("demo7").innerHTML = months;
+    </script>
+</body>
+</html>
