@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript If Else</title>
+</head>
+<body>
+    <p id="demo1">Good Morning</p>
+    <script>
+        if(new Date().getHours() < 18){
+            document.getElementById("demo1").innerHTML = "Good Day";
+        }
+    </script>
+
+    <p id="demo2"></p>
+    <script>
+        const hour = new Date().getHours();
+        let greeting;
+
+        if(hour < 10){
+            greeting = "Good Morning";
+        }
+        else if(hour <20){
+            greeting = "Good Day";
+        }
+        else{
+            greeting =  "Good Evening";
+        }
+        document.getElementById("demo2").innerHTML = greeting;
+    </script>
+
+    <h2>JavaScript Switch</h2>
+    <p id="demo3"></p>
+    <script>
+        let day;
+        switch(new Date().getDay()){
+            case 0:
+                day = "Sunday";
+                break;
+            case 1:
+                day = "Monday";
+                break;
+            case 2:
+                day = "Tuesday";
+                break;
+            case 3:
+                day = "Wednesday";
+                break;
+            case 4:
+                day = "Thursday";
+                break;
+            case 5:
+                day = "Friday";
+                break;
+            case 6:
+                day = "Saturday";
+                break;
+        }
+        document.getElementById("demo3").innerHTML = "Today is " + day;
+    </script>
+
+    <p id="demo4"></p>
+    <script>
+        let text1;
+        switch(new Date().getDay()){
+            case 6: 
+                text1 = "Today is Saturday";
+                break;
+            case 0: 
+                text1 = "Today is Sunday";
+                break;
+            default:
+                text1 = "Looking forward to the weekend";
+        }
+        document.getElementById("demo4").innerHTML = text1;
+    </script>
+
+    <p id="demo5"></p>
+    <script>
+        let text2;
+        switch(new Date().getDay()){
+            case 6: 
+                text2 = "Today is Saturday";
+                break;
+            default:
+                text2 = "Looking forward to the weekend";
+                break;
+            case 0: 
+                text2 = "Today is Sunday";
+                break;
+        }
+        document.getElementById("demo5").innerHTML = text2;
+    </script>
+
+    <p id="demo6"></p>
+    <script>
+        let text3;
+        switch(new Date().getDay()){
+            case 1:
+            case 5:
+                text3 = "Soon it is weekend";
+                break;
+            case 0:
+            case 6:
+                text3 = "It is weekend";
+                break;
+            default: 
+                text3 = "Looking forward to the weekend";
+        }
+        document.getElementById("demo6").innerHTML = text3;
+    </script>
+
+    <p id="demo7"></p>
+    <script>
+        let x = "1";
+        switch(x){
+            case 0: 
+                text4 = "Off";
+                break;
+            case 1:
+                text4 = "On";
+                break;
+            default: 
+                text4 = "No value found";
+        }
+        document.getElementById("demo7").innerHTML = text4;
+    </script>
+</body>
+</html>
