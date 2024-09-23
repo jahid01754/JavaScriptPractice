@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Loops</title>
+</head>
+<body>
+    <h1>For loops</h1>
+    <p id="demo1"></p>
+    <script>
+        const cars1 = ["BMW","Volvo","Saab","Ford","Fiat","Audi"];
+        let text1 = "";
+
+        for(i = 0; i<cars1.length; i++){
+            text1 += cars1[i] + "<br>";
+        }
+        document.getElementById("demo1").innerHTML = text1;
+    </script>
+
+    <p id="demo2"></p>
+    <script>
+        let text2 = "";
+        for(var i = 5; i >= 0; i--){
+            text2 += "The number is " + i + "<br>";
+        }
+        //console.log(text);
+        document.getElementById("demo2").innerHTML = text2;
+    </script>
+
+    <p id="demo3"></p>
+    <script>
+        const cars2 = ["BMW","Volvo","Saab","Ford"];
+        var i,len,text3;
+        for(i = 0, len = cars2.length, text3= ""; i<len; i++){
+            text3 += cars2[i] + "<br>";
+        }
+        document.getElementById("demo3").innerHTML = text3;
+    </script>
+
+    <p id="demo4"></p>
+    <script>
+        const cars3 = ["BMW","Volvo","Saab","Ford"];
+        var i = 2;
+        let len1 = cars3.length;
+        let text4 = "";
+
+        for( ; i<len; i++){
+            text4 += cars3[i] + "<br>";
+        }
+        document.getElementById("demo4").innerHTML = text4;
+    </script>
+
+    <p id="demo5"></p>
+    <script>
+        const cars4 = ["BMW", "Volvo", "Saab", "Ford"];
+        var i = 0;
+        let len2 = cars4.length;
+        let text5 = "";
+        for(; i<len2;){
+            text5 += cars4[i] + "<br>";
+            i++;
+        }
+        document.getElementById("demo5").innerHTML = text5;
+    </script>
+
+
+    <h1>For in loops</h1>
+
+    <p id="demo6"></p>
+    <script>
+        const person = {
+            fname: "John",
+            lname: "Doe",
+            age: 25
+        };
+        let text6 = "";
+        for(let x in person){
+            text6 += person[x] + "<br>";
+        }
+        document.getElementById("demo6").innerHTML = text6;
+    </script>
+
+    <p id="demo7"></p>
+    <script>
+        const numbers = [45,4,9,16,25];
+        let text7 = "";
+        for(let x in numbers){
+            text7 += numbers[x] + "<br>";
+        }
+        document.getElementById("demo7").innerHTML = text7;
+    </script>
+
+    <p id="demo8"></p>
+    <script>
+        const numbers1 = [45,4,9,16,25];
+        let text8 = "";
+        numbers1.forEach(myFunction);
+        document.getElementById("demo8").innerHTML = text8;
+        function myFunction(value){
+            text8 += value + "<br>";
+        }
+    </script>
+
+    <h1>For of loop</h1>
+
+    <p id="demo9"></p>
+    <script>
+        const cars5 = ["BMW","Volvo","Mini"];
+        let text9 = "";
+        for(let x of cars5){
+            text9 += x + "<br>";
+        }
+        document.getElementById("demo9").innerHTML = text9;
+    </script>
+
+    <p id="demo10"></p>
+    <script>
+        let language = "JavaScript";
+        let text10 = "";
+        for(let x of language){
+            text10 += x + "<br>";
+        }
+        document.getElementById("demo10").innerHTML = text10;
+    </script>
+
+    <h1>While Loop</h1>
+
+    <p id="demo11"></p>
+    <script>
+        let text11 = "";
+        let i = 0;
+        while(i<10){
+            text11 += "<br> The number is " + i;     
+        }
+    </script>
+</body>
+</html>
