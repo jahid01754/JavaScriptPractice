@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break & Continue</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <script>
+        let text = "";
+        for(let a=0; a<10; a++){
+            if(a === 3){
+                break;
+            }
+            text += "The number is " + a + "<br>";
+        }
+        document.getElementById("demo1").innerHTML = text;
+    </script>
+
+    <p id="demo2"></p>
+    <script>
+        let text1 = "";
+        for(let b=0; b<10; b++){
+            if(b === 3){
+                continue;
+            }
+            text1 += "The number is " + b + "<br>";
+        }
+        document.getElementById("demo2").innerHTML = text1;
+    </script>
+
+    <p id="demo3"></p>
+    <script>
+        const cars = ["BMW","Volvo","Fiat","Ford"];
+        let text2 = "";
+
+        list: {
+            text2 += cars[0] + "<br>";
+            //break list;
+            text2 += cars[1] + "<br>";
+            //break list;
+            text2 += cars[2] + "<br>";
+            break list;
+            text2 += cars[3] + "<br>";
+        }
+        document.getElementById("demo3").innerHTML = text2;
+    </script>
+</body>
+</html>
