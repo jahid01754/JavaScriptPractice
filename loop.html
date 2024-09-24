@@ -123,5 +123,30 @@
         }
         document.getElementById("demo10").innerHTML = text10;
     </script>
+
+    <h1>While Loop</h1>
+
+    <p id="demo11"></p>
+    <script>
+        let text11 = "";
+        let i = 0;
+        while(i<10){
+            text11 += "<br> The number is " + i;  
+            i++;   
+        }
+        document.getElementById("demo11").innerHTML = text11;
+    </script>
+
+    <p id="demo12"></p>
+    <script>
+        let text12 = "";
+        let a = 0;
+        do{
+            text12 += "<br> The number is " + a;
+            a++;
+        }
+        while(a<10);
+        document.getElementById("demo12").innerHTML = text12;
+    </script>
 </body>
 </html>
