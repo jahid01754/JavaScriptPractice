@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Iterables</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <script>
+        const name = "W3Schools";
+        let text = "";
+        for(const x of name){
+            text += x + "<br>";
+        }
+        document.getElementById("demo1").innerHTML = text;
+    </script>
+
+    <p id="demo2"></p>
+    <script>
+        const letters = ["a","b","c"];
+        let text1 = "";
+        for(let y of letters){
+            text1 += y + "<br>";
+        }
+        document.getElementById("demo2").innerHTML = text1;
+    </script>
+
+    <p id="demo3"></p>
+    <script>
+        const numbers = [1,2,3];
+        let text2 = "";
+        for(let z of numbers){
+            text2 += z + "<br>";
+        }
+        document.getElementById("demo3").innerHTML = text2;
+    </script>
+
+    <p id="demo4"></p>
+    <script>
+        const letters1 = new Set (["a","b","c"]);
+        let text3 = "";
+        for(const a of letters1){
+            text3 += a + "<br>";
+        }
+        document.getElementById("demo4").innerHTML = text3;
+    </script>
+
+    <p id="demo5"></p>
+    <script>
+        const fruits = new Map([
+            ["apples",500],
+            ["bananas",300],
+            ["oranges",200]
+        ]);
+        let text4 = "";
+        for(const b of fruits){
+            text4 += b + "<br>";
+        }
+        document.getElementById("demo5").innerHTML = text4;
+    </script>
+
+    <p id="demo6"></p>
+    <script>
+        function myNumbers(){
+            let n = 0;
+            return {
+                next: function(){
+                    n += 10;
+                    return {
+                        value: n,
+                        done: false
+                    };
+                }
+            };
+        }
+        const n = myNumbers();
+        n.next();
+        n.next();
+        n.next();
+
+        document.getElementById("demo6").innerHTML = n.next().value;
+    </script> 
+
+    <p id="demo7"></p>
+    <script>
+        myNumbers1 = {};
+
+        myNumbers1[Symbol.iterator] = function(){
+            let m = 0;
+            done = false;
+            return {
+                next(){
+                    m += 10;
+                    if(m == 100){
+                        done = true
+                    }
+                    return {
+                        value: m,
+                        done: done
+                    };
+                }
+            };
+        }
+        let text5 = "";
+        for (const num of myNumbers1){
+            text5 += num + "<br>";
+        }
+        document.getElementById("demo7").innerHTML = text5;
+    </script>
+
+    <p id="demo8"></p>
+    <script>
+        myNumbers2 = {};
+        myNumbers2[Symbol.iterator] = function(){
+            let c = 0;
+            done = false;
+            return {
+                next(){
+                    c += 10;
+                    if(c == 100){
+                        done = true;
+                    }
+                    return{
+                        value: c,
+                        done: done
+                    };
+                }
+            };
+        }
+        let iterator = myNumbers2[Symbol.iterator]();
+        let text6 = "";
+        while(true){
+            const result = iterator.next();
+            if(result.done) break;
+            text += result.value + "<br>"
+        }
+        document.getElementById("demo8").innerHTML = text;
+    </script>
+</body>
+</html>
