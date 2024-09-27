@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Set Method</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <script>
+        const letters = new Set(["a","b","c","d"]);
+
+        document.getElementById("demo1").innerHTML = "The set has " + letters.size + " values.";
+    </script>
+
+    <p id="demo2"></p>
+    <script>
+        const letters1 = new Set();
+        letters1.add("a");
+        letters1.add("b");
+        letters1.add("c");
+        document.getElementById("demo2").innerHTML = "The set has " + letters1.size + " values.";
+    </script>
+
+    <p id="demo3"></p>
+    <!-- <p id="demo4"></p> -->
+    <script>
+        const letters2 = new Set(["a","b","c","d"]);
+        letters2.add("e");
+        letters2.add("f");
+        letters2.add("g");
+
+        document.getElementById("demo3").innerHTML = "The set has " + letters2.size + " values.";
+        //document.getElementById("demo4").innerHTML = letters2;
+    </script>
+
+    <p id="demo4"></p>
+    <script>
+        const letter3 = new Set(["a","b","c"]);
+        let text = "";
+        for(const x of letter3){
+            text += x + "<br>";
+        }
+        document.getElementById("demo4").innerHTML = text;
+    </script>
+
+    <p id="demo5"></p>
+    <script>
+        const letters4 = new Set (["a","b","c"]);
+        answer = letters4.has("d");
+        document.getElementById("demo4").innerHTML = "The answer is " + answer;
+    </script>
+
+    <p id="demo6"></p>
+    <script>
+        const letters5 = new Set(["a","b","c"]);
+
+        let text1 = "";
+        letters5.forEach(function(value){
+            text1 += value + "<br>";
+        })
+        document.getElementById("demo6").innerHTML = text1;
+    </script>
+
+    <p id="demo7"></p>
+    <script>
+        const letters6 = new Set(["a","b","c","d","e"]);
+        const myIterator1 = letters6.values();
+
+        let text2 = "";
+        for(const x1 of myIterator1){
+            text2 += x1 + "<br>";
+        }
+        document.getElementById("demo7").innerHTML = text2;
+    </script>
+
+    <p id="demo8"></p>
+    <script>
+        const letters7 = new Set(["a","b","c"]);
+        const myIterator2 = letters7.keys();
+        let text3 = "";
+        for(const x of myIterator2){
+            text3 += x + "<br>";
+        }
+        document.getElementById("demo8").innerHTML = text3;
+    </script>
+
+    <p id="demo9"></p>
+    <script>
+        const letters8 = new Set(["a","b","c"]);
+        const iterator = letters8.entries();
+        let text4 = "";
+        for(const entry of iterator){
+            text4 += entry + "<br>";
+        }
+        document.getElementById("demo8").innerHTML = text4;
+    </script>
+</body>
+</html>
