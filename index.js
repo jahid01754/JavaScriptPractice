@@ -153,30 +153,225 @@
 // console.log(result.get("ok"));
 
 
-const fruits = [
-  { name: "apples", quantity: 300 },
-  { name: "bananas", quantity: 500 },
-  { name: "oranges", quantity: 200 },
-  { name: "kiwi", quantity: 150 },
-];
+// const fruits = [
+//   { name: "apples", quantity: 300 },
+//   { name: "bananas", quantity: 500 },
+//   { name: "oranges", quantity: 200 },
+//   { name: "kiwi", quantity: 150 },
+// ];
 
-// Callback function to select low volumes
-function myCallback({ quantity }) {
-  return quantity > 200 ? "ok" : "low";
+// // Callback function to select low volumes
+// function myCallback({ quantity }) {
+//   return quantity > 200 ? "ok" : "low";
+// }
+
+// // Group by ok and low
+// const result = Map.groupBy(fruits, myCallback);
+
+// // Display Results
+// let text = "These fruits are Ok: <br>";
+// for (let x of result.get("ok")) {
+//   text += x.name + " " + x.quantity + "<br>";
+// }
+// text += "<br>These fruits are low: <br>";
+// for (let x of result.get("low")) {
+//   text += x.name + " " + x.quantity + "<br>";
+// }
+// document.getElementById("demo").innerHTML = text;
+
+// console.log(result.get("ok"));
+
+// console.log(typeof {name: 'John'});
+// console.log(typeof[1,2,3,4]);
+// console.log(typeof new Map());
+// console.log(typeof new Set());
+// console.log(typeof null);
+// console.log(typeof function myFunc(){});
+
+// const fruits = ["Banana","Orange","Apple"];
+// console.log(Array.isArray(fruits));
+
+// const time = new Date();
+// console.log("Date: " + (time instanceof Date));
+
+// console.log(fruits instanceof Array);
+
+// const fruits1 = new Set (["apples","Banana","orange"]);
+// console.log(fruits1 instanceof Set);
+
+// let person = {
+//     firstName: "John",
+//     lastName: "Doe",
+//     age: 50,
+//     eyeColor: "Blue"
+// };
+
+// person = null;
+// person = undefined;
+
+// console.log(typeof person);
+
+// console.log("John".constructor + "<br>" +
+//     "John".constructor + "<br>" +
+//     (3.14).constructor + "<br>" +
+//     false.constructor + "<br>" +
+//     1234n.constructor + "<br>" +
+//     {}.constructor + "<br>" +
+//     [].constructor + "<br>" +
+//     new Date().constructor + "<br>" +
+//     new Set().constructor + "<br>" +
+//     new Map().constructor + "<br>" + 
+//     function(){}.constructor
+//  );
+
+// console.log(fruits.constructor === Array);
+
+// console.log(
+//     Number("3.14") + "<br>" + 
+//     Number(Math.PI) + "<br>" + 
+//     Number("   ") + "<br>" + 
+//     Number("") + "<br>" + 
+//     Number("99 88") + "<br>" + 
+//     Number("John") + "<br>"
+// );
+
+// let x = "5";
+// let y = +x;
+// console.log(typeof y + typeof x);
+
+// let a = "John";
+// let b = +a;
+// console.log(typeof a + " " + typeof b);
+
+// const person1 = {
+//     name: "Alice",
+//     age: 30,
+//     city: "Wonderland"
+// };
+// const { name, age } = person1;
+// console.log(name);
+// console.log(age);
+
+// const  user = {
+//     id: 1,
+//     info: {
+//         name1: "Charlie",
+//         age1: 50
+//     }
+// };
+// const {info: {name1,age1,city = "Bogra"}} = user;
+
+// console.log(name1);
+// console.log(age1);
+// console.log(city);
+
+// const info = {
+//     firstName: "Diana",
+//     lastName: "Prince"
+// };
+// const {firstName: first, lastName: last} = info;
+// console.log(first);
+// console.log(last);
+
+// function greet({name,age}){
+//     console.log(`Hello, my name is ${name} and I am ${age} years old.`);
+// }
+// const user1 = {name: "Eve", age: 22};
+// greet(user1); 
+
+// let name2 = "W3Schools";
+// let [a1,a2,a3,a4,a5,a6,a7,a8,a9] = name2;
+// console.log(a2);
+
+// const fruits2 = ["Banana","Orange","Apple"];
+// const [fruitsA,,fruitsB] = fruits2;
+// console.log(fruitsA);
+// console.log(fruitsB);
+
+// const numbers = [10,20,30,40,50,60,70];
+// const [b1,b2,...rest] = numbers;
+// console.log(rest);
+
+// const fruits3 = new Map([
+//     ["Apples",500],
+//     ["Bananas",300],
+//     ["Oranges",200]
+// ]);
+// let b3 = "";
+// for( const [key,value] of fruits3){
+//     b3 += key + " is " + value + ", ";
+// }
+// console.log(b3);
+
+// let firstName = "John";
+// let lastName = "Doe";
+
+// [firstName, lastName] = [lastName, firstName];
+
+// console.log(firstName);
+// console.log(lastName);
+
+// console.log(5 & 1);
+// console.log(5 ^ 1);
+
+// function dec2bin(dec){
+//     return (dec >>> 0).toString(2);
+// }
+// console.log(dec2bin(-5));
+
+// function bin2dec(bin){
+//     return (bin,2).toString(10);
+// }
+// console.log(bin2dec(101));
+
+// let text1 = "Visit W3Schools";
+// let n = text1.search("W3Schools");
+// console.log(n);
+
+// function myFunction(){
+
+// }
+// let ab = "Welcome Guest!"; 
+// try {
+//     alert(ab);
+// } catch (err) {
+//     console.log(err.message);
+// }
+
+function myFunction(){
+    const message = document.getElementById("demo1");
+    message.innerHTML = "";
+    let x = document.getElementById("demo").value;
+    try {
+        if(x.trim() == "") throw "empty";
+        if(isNaN(x)) throw "Not a Number";
+        x = Number(x);
+        if(x<5) throw "too low";
+        if(x>10) throw "too high";
+    } catch (err) {
+        message.innerHTML = "Input is " + err;
+    }
+    finally{
+        document.getElementById("demo").value = "";
+    }
 }
 
-// Group by ok and low
-const result = Map.groupBy(fruits, myCallback);
-
-// Display Results
-let text = "These fruits are Ok: <br>";
-for (let x of result.get("ok")) {
-  text += x.name + " " + x.quantity + "<br>";
+let num = 1;
+try {
+    num.toPrecision(500);
+} catch (error) {
+    console.log(error.name);
 }
-text += "<br>These fruits are low: <br>";
-for (let x of result.get("low")) {
-  text += x.name + " " + x.quantity + "<br>";
-}
-document.getElementById("demo").innerHTML = text;
 
-console.log(result.get("ok"));
+let x = 5;
+try {
+    x = y + 1;
+} catch (error) {
+    console.log(error.name);
+}
+
+try {
+    eval("alert('Hello)");
+} catch (error) {
+    console.log(error.name);
+}
