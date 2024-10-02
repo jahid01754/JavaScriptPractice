@@ -451,9 +451,45 @@
 // hello4 = b => "Hello " + b;
 // console.log(hello4("People"));
 
-let hello = "";
-hello = () => {
-    document.getElementById("demo").innerHTML += this;
+// let hello = "";
+// hello = () => {
+//     document.getElementById("demo").innerHTML += this;
+// }
+// window.addEventListener("load",hello);
+// document.getElementById("btn").addEventListener("click",hello);
+
+// class Car {
+//     constructor (name,year){
+//         this.name = name;
+//         this.year = year;
+//     }
+//     age(){
+//         const date = new Date();
+//         return date.getFullYear() - this.year;
+//     }
+// }
+
+// const myCar1 = new Car ("Ford", 2014);
+// const myCar2 = new Car ("Audi", 2019);
+
+// console.log(myCar1.name + " " + myCar1.year);
+// console.log(myCar2.name + " " + myCar2.year); 
+// console.log("My car " + myCar1.name + " is " + myCar1.age() + " years old.");
+// console.log("My Car " + myCar2.name + " is " + myCar2.age() + " years old.");
+
+class Car {
+    constructor(name,year){
+        this.name = name;
+        this.year = year;
+    }
+    age(x){
+        return x - this.year;
+    }
 }
-window.addEventListener("load",hello);
-document.getElementById("btn").addEventListener("click",hello);
+const date = new Date();
+let year = date.getFullYear();
+
+const myCar = new Car("Fiat", 2014);
+
+console.log("My Car is " + " is " + myCar.age(year) + " years old.");
+
