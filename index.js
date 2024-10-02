@@ -338,40 +338,122 @@
 //     console.log(err.message);
 // }
 
-function myFunction(){
-    const message = document.getElementById("demo1");
-    message.innerHTML = "";
-    let x = document.getElementById("demo").value;
-    try {
-        if(x.trim() == "") throw "empty";
-        if(isNaN(x)) throw "Not a Number";
-        x = Number(x);
-        if(x<5) throw "too low";
-        if(x>10) throw "too high";
-    } catch (err) {
-        message.innerHTML = "Input is " + err;
-    }
-    finally{
-        document.getElementById("demo").value = "";
-    }
-}
+// function myFunction(){
+//     const message = document.getElementById("demo1");
+//     message.innerHTML = "";
+//     let x = document.getElementById("demo").value;
+//     try {
+//         if(x.trim() == "") throw "empty";
+//         if(isNaN(x)) throw "Not a Number";
+//         x = Number(x);
+//         if(x<5) throw "too low";
+//         if(x>10) throw "too high";
+//     } catch (err) {
+//         message.innerHTML = "Input is " + err;
+//     }
+//     finally{
+//         document.getElementById("demo").value = "";
+//     }
+// }
 
-let num = 1;
-try {
-    num.toPrecision(500);
-} catch (error) {
-    console.log(error.name);
-}
+// let num = 1;
+// try {
+//     num.toPrecision(500);
+// } catch (error) {
+//     console.log(error.name);
+// }
 
-let x = 5;
-try {
-    x = y + 1;
-} catch (error) {
-    console.log(error.name);
-}
+// let x = 5;
+// try {
+//     x = y + 1;
+// } catch (error) {
+//     console.log(error.name);
+// }
 
-try {
-    eval("alert('Hello)");
-} catch (error) {
-    console.log(error.name);
+// try {
+//     eval("alert('Hello)");
+// } catch (error) {
+//     console.log(error.name);
+// }
+
+
+// const person = {
+//     firstName: "John",
+//     lastName: "Doe",
+//     id: 1234,
+//     fullName: function(){
+//         return this.firstName + " " + this.lastName;
+//         //return this;
+//     }
+// };
+// console.log(person.fullName());
+
+// let x = this;
+// console.log(x);
+
+// function myFunction(){
+//     return this;
+// }
+// console.log(myFunction());
+
+// const person1 = {
+//     fullName: function(){
+//         return this.firstName + " " + this.lastName;
+//     }
+// };
+// const person2 = {
+//     firstName: "John",
+//     lastName: "Doe"
+// };
+// let x = person1.fullName.call(person2);
+
+// console.log(x);
+
+// const person = {
+//     firstName: "John",
+//     lastName: "Doe",
+//     fullName: function(){
+//         return this.firstName + " " + this.lastName;
+//     }
+// };
+
+// const member = {
+//     firstName: "Hege",
+//     lastName: "Nilsen"
+// };
+
+// let fullName = person.fullName.bind(member);
+
+// console.log(fullName());
+
+// let myFunction = (a,b) => a * b;
+// console.log(myFunction(4,5));
+
+// let hello = "";
+// hello = function(){
+//     return "Hello world";
+// }
+// console.log(hello());
+
+// hello1 = () => {
+//     return "Hello world. I am a pro Coder." 
+// }
+// console.log(hello1());
+
+// hello2 = () => "Hello people. let's make the world better";
+// console.log(hello2());
+
+// let hello3  = "";
+// hello3 = (a) => "Hello " + a;
+// console.log(hello3("Universe!"));
+
+// let hello4 = "";
+// hello4 = b => "Hello " + b;
+// console.log(hello4("People"));
+
+let hello = "";
+hello = () => {
+    document.getElementById("demo").innerHTML += this;
 }
+window.addEventListener("load",hello);
+document.getElementById("btn").addEventListener("click",hello);
