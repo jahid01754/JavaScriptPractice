@@ -70,7 +70,7 @@
         </script> -->
 
 
-        <h2>JavaScript Hoisting</h2>
+        <!-- <h2>JavaScript Hoisting</h2>
         <p>With <b>const</b>, you cannot use a variable before it is declared: </p>
         <p id="demo"></p>
 
@@ -82,6 +82,12 @@
             } catch (err) {
                 document.getElementById("demo").innerHTML = err;
             }
+        </script> -->
+
+        <p id="demo"></p>
+        <script type="module">
+            import message from "./message.js";
+            document.getElementById("demo").innerHTML = message();
         </script>
 
     </body>
