@@ -1,3 +1,5 @@
+const {printPiramid} = require( "./code.JS")
+
 // const name = "John";
 // const age = 40;
 // export {name,age};
@@ -30,3 +32,43 @@ let text =
     return value > 18;
   }
   console.log(over18);
+
+  const func = (a,b) => a * b;
+  console.log(func(4,5));
+
+  const person = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 50,
+    eyeColor: "Blue"
+  };
+
+  let { firstName, age } = person;
+  //let personInfo = person.firstName + " is " + person.age + " years old.";
+  let personInfo = firstName + " is " + age + " years old.";
+  console.log(personInfo);
+
+  const cars = ["BMW", "Volvo", "Mini"];
+  let a = "";
+  for(let x of cars){
+    a += x + "\n";
+  }
+  console.log(a);
+  
+  let language = "JS";
+  let str = "";
+  for(let x of language){
+    str += x + "\n";
+  }
+  console.log(str);
+  
+const fruits = new Map([
+  ["Apples", 500],
+  ["Bananas", 300],
+  ["Oranges", 100]
+]);
+
+let numb = fruits.get("Apples");
+console.log(numb);
+
+printPiramid(3);
